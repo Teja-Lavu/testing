@@ -1,0 +1,11 @@
+.classpath
+.project
+.settings/
+GeneratedReport/
+target/
+test-output/
+/.metadata/
+/bin/
+
+#Developers using a mac
+**/.DS_Store

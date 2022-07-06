@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+  <configuration>
+
+    <theme>standard</theme>
+    <encoding>UTF-8</encoding>
+
+    <!-- protocol for script and stylesheets -->
+    <protocol>https</protocol>
+
+    <!-- title of the document -->
+    <documentTitle>MRP</documentTitle>
+
+    <!-- report name - displayed at top-nav -->
+    <reportName>Automation Report</reportName>
+
+    <!-- location of charts in the test view -->
+    <testViewChartLocation>bottom</testViewChartLocation>
+
+    <!-- custom javascript -->
+    <scripts>
+      $(document).ready(
+          function() {
+            $('#test-view .subview-right.left th:nth-child(3)').text("Steps");
+            $('#dashboard-view .card-panel.dashboard-environment span').text("System/Device Info");
+          }
+        );
+      $('#enable-dashboard').click();
+
+    </scripts>
+
+    <!-- custom styles -->
+    <styles>
+      .right.label.cyan.white-text{
+        float: left!important;
+      }
+      pre{
+        height:100px;
+        overflow:auto;
+      }
+    </styles>
+  </configuration>
+</extentreports>
